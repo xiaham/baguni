@@ -1,14 +1,17 @@
 var canvasWidth = 600;
 var canvasHeight = 400;
 
+
+
+
 var egg = {
+	
 	x: 285,
 	y: 20,
 	yVel: 0,
 	width: 30,
 	color: "#fff",
-	draw: function() {
-		fill(this.color);
+	draw: function() {fill(this.color);
 		ellipse(this.x, this.y, this.width);
 	},
 	update: function() {
@@ -16,11 +19,11 @@ var egg = {
 		if (this.y + this.width >= canvasHeight) {
 			this.y = 20;
 			this.yVel = 0;
-		}
-	}
-};
+		}}};
+
 
 var bucket = {
+	
 	x: 20,
 	y: 350,
 	xVel: 5,
@@ -28,7 +31,12 @@ var bucket = {
 	width: 80,
 	height: 40,
 	color: "#fff",
-	draw: function() {
+	draw: function() 
+	
+	
+	
+	
+	{
 		fill(this.color);
 		rect(this.x, this.y, this.width, this.height);
 	},
@@ -61,7 +69,7 @@ function draw() {
 		egg.yVel = 5;
 	}
 	if (collision(egg, bucket)) {
-		console.log("success!");
+		console.log("!");
 		egg.y = 20;
 		egg.yVel = 0;
 	}
